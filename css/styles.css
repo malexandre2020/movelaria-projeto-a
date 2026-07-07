@@ -235,7 +235,7 @@ p { margin: 0; }
   color: var(--latao);
   margin-top: 5px;
 }
-.logo.logo-lg img { width: 60px; height: 60px; }
+.logo.logo-lg img { width: 72px; height: 72px; }
 .logo.logo-lg strong { font-size: 22px; }
 
 .nav-links {
