@@ -801,6 +801,19 @@ section { position: relative; }
   flex-wrap: wrap;
   gap: 12px;
 }
+.footer-credit a {
+  color: rgba(243,238,230,0.55);
+  border-bottom: 1px solid rgba(243,238,230,0.2);
+  transition: color var(--transition), border-color var(--transition);
+}
+.footer-credit a:hover {
+  color: var(--latao);
+  border-color: var(--latao);
+}
+.footer-credit-sep {
+  margin: 0 8px;
+  opacity: 0.5;
+}
 
 /* ---------- Reveal on scroll ---------- */
 .reveal {
