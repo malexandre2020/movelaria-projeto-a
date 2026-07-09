@@ -188,7 +188,7 @@ p { margin: 0; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 22px 0;
+  padding: 26px 0;
   transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
 }
 .site-header .container {
@@ -200,7 +200,7 @@ p { margin: 0; }
 .site-header.is-scrolled {
   background: rgba(27, 29, 33, 0.94);
   backdrop-filter: blur(8px);
-  padding: 14px 0;
+  padding: 12px 0;
   box-shadow: 0 1px 0 rgba(255,255,255,0.06);
 }
 
@@ -237,23 +237,45 @@ p { margin: 0; }
 }
 .logo.logo-lg img { width: 72px; height: 72px; }
 
-.logo-wordmark { flex-direction: column; align-items: flex-start; gap: 6px; }
+.logo-circle img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(243,238,230,0.18);
+  transition: width var(--transition), height var(--transition);
+}
+.logo-circle .logo-text strong { font-size: 21px; }
+.site-header.is-scrolled .logo-circle img { width: 50px; height: 50px; }
+@media (max-width: 720px) {
+  .logo-circle img { width: 56px; height: 56px; }
+  .logo-circle .logo-text strong { font-size: 19px; }
+}
+
+.logo-wordmark {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  transition: transform var(--transition);
+}
 .logo-wordmark img {
   width: auto;
-  height: 34px;
+  height: 62px;
   border-radius: 0;
   box-shadow: none;
   display: block;
+  transition: height var(--transition);
 }
 .logo-wordmark em {
   font-family: var(--font-mono);
   font-style: normal;
-  font-size: 9.5px;
+  font-size: 10.5px;
   letter-spacing: 0.18em;
   color: var(--latao);
 }
+.site-header.is-scrolled .logo-wordmark img { height: 46px; }
 @media (max-width: 720px) {
-  .logo-wordmark img { height: 40px; }
+  .logo-wordmark img { height: 52px; }
 }
 .logo.logo-lg strong { font-size: 22px; }
 
